@@ -19,25 +19,34 @@
      <div class="shadow"></div>
     </div>
   </div>
-  <div class="container text-center">
-    <div class="row text-center">
-      <% @cocktails.each do |cocktail| %>
-        <div class="col-xs-4">
-          <div class="card">
-            <div class="cocktail-link">
-              <%= link_to cocktail.name, cocktail_path(cocktail) %>
-            </div>
-            <div class="delete-item btn btn-primary">
-              <%= link_to cocktail_path(cocktail), method:"delete" do %>
-                <i class="fas fa-trash-alt"></i>
-              <% end %>
+  <div class="text-center">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-4">
+            <div class="container">
+              <div class="card">
+                <div class="front"><%= cocktail.name %></div>
+                  <div class="back">
+                    <ul>
+                      <h6><strong><%= cocktail.name %></strong></h6>
+                      <% cocktail.doses.each do |dose| %>
+                        <p>
+                          <%= dose.ingredient.name %>
+                          <%= dose.description %>
+                        </p>
+                      <% end %>
+                    <%= link_to "ADD", new_cocktail_dose_path(cocktail), class:"btn btn-success"  %>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
   </div>
 </div>
+
+
 
 
 
