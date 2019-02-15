@@ -1,33 +1,3 @@
-// .card {
-//   background-size: cover;
-//   background-position: center;
-//   height: 180px;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   background-color: #A2A79E;
-//   font-size: 32px;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   margin: 10px 0px;
-//   position: relative;
-//   .cocktail-link {
-//     font-family: 'Libre Barcode 39 Text', cursive;
-//     color: white;
-//     position: absolute;
-//     top: 10px;
-//     left: 10px;
-//   }
-//   .delete-item i {
-//     font-size: 10px;
-//     position: absolute;
-//     bottom: 10px;
-//     right: 10px;
-//     color: #88292F;
-//   }
-// }
-
 html,
 body {
   height: 100%;
@@ -46,8 +16,8 @@ body {
   // align-items: center;
 }
 .container {
-  width: 300px;
-  height: 200px;
+  width: 450px;
+  height: 300px;
   position: relative;
   -webkit-perspective: 800px;
   -ms-perspective: 800px;
@@ -55,6 +25,14 @@ body {
   border-radius: 4px;
 }
 
+.col-xs-4 {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-family: 'Coiny', cursive;
+  font-size: 32px;
+}
 
 .card {
   width: 100%;
@@ -92,6 +70,14 @@ body {
 .card .back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+
+h6 {
+    font-family: 'Coiny', cursive;
+    font-size: 50px;
+  strong a {
+    text-decoration: none !important;
+  }
 }
 
 .card.flipped {

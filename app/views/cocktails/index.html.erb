@@ -25,19 +25,35 @@
           <div class="col-xs-4">
             <div class="container">
               <div class="card">
-                <div class="front"><%= cocktail.name %></div>
-                  <div class="back">
-                    <ul>
-                      <h6><strong><%= cocktail.name %></strong></h6>
-                      <% cocktail.doses.each do |dose| %>
-                        <p>
-                          <%= dose.ingredient.name %>
-                          <%= dose.description %>
-                        </p>
-                      <% end %>
-                    <%= link_to "ADD", new_cocktail_dose_path(cocktail), class:"btn btn-success"  %>
-                  </ul>
-                </div>
+                <div class="front"><strong><%= cocktail.name %></strong></div>
+                  <% if cocktail.photo.present? %>
+                    <div class="back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)),
+                      url('<%= cl_image_path cocktail.photo, height: 300, width: 450, crop: :fill %>')">
+                        <ul>
+                          <h6><strong><%= link_to cocktail.name, cocktail_path(cocktail)  %></strong></h6>
+                          <% cocktail.doses.each do |dose| %>
+                            <p>
+                              <%= dose.ingredient.name %>
+                              <%= dose.description %>
+                            </p>
+                          <% end %>
+                        <%= link_to "ADD", new_cocktail_dose_path(cocktail), class:"btn btn-success"  %>
+                      </ul>
+                    </div>
+                  <% else %>
+                    <div class="back">
+                        <ul>
+                          <h6><strong><%= link_to cocktail.name, cocktail_path(cocktail)  %></strong></h6>
+                          <% cocktail.doses.each do |dose| %>
+                            <p>
+                              <%= dose.ingredient.name %>
+                              <%= dose.description %>
+                            </p>
+                          <% end %>
+                        <%= link_to "ADD", new_cocktail_dose_path(cocktail), class:"btn btn-success"  %>
+                      </ul>
+                    </div>
+                  <% end %>
               </div>
             </div>
           </div>
@@ -45,7 +61,6 @@
       </div>
   </div>
 </div>
-
 
 
 
