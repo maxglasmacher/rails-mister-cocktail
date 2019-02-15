@@ -1,0 +1,22 @@
+<div class="container text-center">
+  <h1>List of cocktails(<%=@cocktails.count%>)</h1>
+  <h6>Note: this site was created on Valentine's day</h6>
+    <iframe width="800" height="600" src="https://www.youtube.com/embed/4tsHF020-1k?autoplay=1&controls=0&showinfo=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="row text-center">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-4">
+          <div class="card">
+            <div class="cocktail-link">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </div>
+            <div class="delete-item btn btn-primary">
+              <%= link_to cocktail_path(cocktail), method:"delete" do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
+

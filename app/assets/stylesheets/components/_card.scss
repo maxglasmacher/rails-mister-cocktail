@@ -1,0 +1,35 @@
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #A2A79E;
+  font-size: 32px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px 0px;
+  position: relative;
+  .cocktail-link {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .delete-item i {
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #88292F;
+  }
+}
+
+
+
+
+

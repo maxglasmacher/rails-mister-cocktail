@@ -1,0 +1,17 @@
+<div class="navbar-lewagon">
+  <a href="#">
+    <%= image_tag "cocktaillogo", alt: "alttext", class:"avatar"%>
+  </a>
+
+  <!-- displayed on laptops -->
+
+
+  <!-- displayed on phone / tablet -->
+  <div class="navbar-lewagon-actions d-block d-sm-none">
+    <div class="add-cock">
+      <%= link_to new_cocktail_path do %>
+        <i class="fas fa-plus"></i>
+      <% end %>
+    </div>
+  </div>
+</div>

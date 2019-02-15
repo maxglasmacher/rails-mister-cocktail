@@ -1,0 +1,48 @@
+.navbar-lewagon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 16px 24px;
+  height: 80px;
+}
+
+iframe{
+   z-index: 2;
+}
+
+.add-cock i {
+  color: #B0C0BC;
+  font-size: 30px;
+}
+
+.avatar {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.navbar-lewagon .brand {
+  width: 40px;
+}
+
+.navbar-lewagon .navbar-lewagon-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-lewagon .navbar-lewagon-actions .navbar-lewagon-link {
+  margin-left: 24px;
+  color: #999999;
+}
+.navbar-lewagon .navbar-lewagon-actions .navbar-lewagon-link:hover {
+  color: #151515;
+}
+
+
+.navbar-lewagon .navbar-lewagon-actions .avatar {
+  margin-left: 24px;
+}
+
+.navbar-lewagon .dropdown-toggle {
+  cursor: pointer;
+}
